@@ -29,13 +29,13 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 80,
+            height: 100,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: ImageUrl.length,
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(left: 11),
+                    padding: const EdgeInsets.only(left: 10),
                     child: ProfileWidget(
                       imagePath: ImageUrl[index],
                       ProfileName: ProfileName[index],
@@ -85,11 +85,11 @@ class ProfileWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: 55,
-          width: 55,
+          height: 80,
+          width: 80,
           padding: EdgeInsets.all(3),
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(50),
               gradient: const LinearGradient(
                   begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
@@ -102,11 +102,11 @@ class ProfileWidget extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(2),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30), color: Colors.white),
+                borderRadius: BorderRadius.circular(50), color: Colors.white),
             child: ClipOval(
                 child: Image.network(
               imagePath,
-              height: 50,
+              height: 100,
             )),
           ),
         ),
