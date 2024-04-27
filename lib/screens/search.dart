@@ -12,7 +12,7 @@ class SearchScreen extends StatelessWidget {
         slivers: [
           SliverAppBar(
             elevation: 0,
-            floating: true, // App bar will hide when scrolling down
+            floating: true,
             title: ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: Container(

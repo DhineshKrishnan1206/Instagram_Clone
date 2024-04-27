@@ -255,27 +255,41 @@ class FeedWidget extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundImage: Image.network(
-                        "https://play-lh.googleusercontent.com/C9CAt9tZr8SSi4zKCxhQc9v4I6AOTqRmnLchsu1wVDQL0gsQ3fmbCVgQmOVM1zPru8UH",
-                        height: 25,
-                        width: 25,
-                      ).image,
-                    ),
-                    const Text(
-                      "Danger",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    const Expanded(
-                      child: Text(
-                        "Why are Instagram comment sections like the worst social media comment sections ever?",
-                        overflow: TextOverflow.visible,
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: Image.network(
+                          "https://play-lh.googleusercontent.com/C9CAt9tZr8SSi4zKCxhQc9v4I6AOTqRmnLchsu1wVDQL0gsQ3fmbCVgQmOVM1zPru8UH",
+                          height: 25,
+                          width: 25,
+                        ).image,
                       ),
-                    )
-                  ],
-                )
+                      const SizedBox(width: 5),
+                      Flexible(
+                          child: RichText(
+                              text: const TextSpan(children: [
+                        TextSpan(
+                          text: "Danger",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(
+                          text: " ", // Add a space here
+                          style: TextStyle(color: Colors.black, fontSize: 14),
+                        ),
+                        TextSpan(
+                            text:
+                                "Why are Instagram comment sections like the worst social media comment sections ever?",
+                            style:
+                                TextStyle(color: Colors.black, fontSize: 14)),
+                      ])))
+                    ],
+                  ),
+                ),
               ],
             ),
           );

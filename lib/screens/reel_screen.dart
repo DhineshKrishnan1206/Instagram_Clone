@@ -10,8 +10,6 @@ class ReelScreen extends StatefulWidget {
 class _ReelScreenState extends State<ReelScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
-    );
+    return const Scaffold();
   }
 }
