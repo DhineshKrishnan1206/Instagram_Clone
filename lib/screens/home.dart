@@ -265,7 +265,7 @@ class FeedWidget extends StatelessWidget {
                       ).image,
                     ),
                     const Text(
-                      "DanGer",
+                      "Danger",
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     const Expanded(
